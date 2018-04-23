@@ -1,0 +1,13 @@
+# How to drag fields from the GridView to PivotGridControl
+
+
+<p>This example demonstrates how to implement the capability to add fields to the PivotGridControl by dragging columns from the GridView.</p>
+
+
+<h3>Description</h3>
+
+<p>This feature can be implemented by handling two events. Within the <a href="http://documentation.devexpress.com/#WindowsForms/DevExpressXtraGridViewsGridGridView_DragObjectOvertopic">GridView.DragObjectOver</a> event handler, the Valid parameter of the <a href="http://documentation.devexpress.com/#WindowsForms/DevExpressXtraGridViewsBaseDragObjectOverEventArgs_DropInfotopic">DragObjectOverEventArgs.DropInfo</a> is set to false if the cursor is hovering over the PivotGridControl. This is done to prevent the dragged column from being hidden.</p><p>Within the <a href="http://documentation.devexpress.com/#WindowsForms/DevExpressXtraGridViewsGridGridView_DragObjectDroptopic">GridView.DragObjectDrop</a> event handler, the <a href="http://documentation.devexpress.com/#WindowsForms/DevExpressXtraPivotGridPivotGridControl_CalcHitInfotopic">PivotGridControl.CalcHitInfo</a> method is used to check whether the column has been dropped within the field area. If so, a new PivodGridField is created and added to the corresponding area.</p>
+
+<br/>
+
+
