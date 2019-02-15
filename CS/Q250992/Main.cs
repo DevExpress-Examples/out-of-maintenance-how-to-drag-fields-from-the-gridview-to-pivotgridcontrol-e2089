@@ -4,17 +4,16 @@ using DevExpress.XtraGrid.Views.Base;
 using System.Drawing;
 using DevExpress.XtraPivotGrid;
 using DevExpress.XtraGrid.Columns;
+using DevExpress.XtraEditors;
 
-namespace Q250992 {
-    public partial class Form1 :Form {
-        public Form1() {
+namespace DXSample {
+    public partial class Main : XtraForm {
+        public Main() {
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e) {
-            // TODO: This line of code loads data into the 'nwindDataSet.SalesPerson' table. You can move, or remove it, as needed.
-            this.salesPersonTableAdapter.Fill(this.nwindDataSet.SalesPerson);
-
+        private void OnLoad(object sender, EventArgs e) {
+            recordBindingSource.DataSource = DataHelper.GetData(10);
         }
 
         private void OnGridViewDragObjectDrop(object sender, DragObjectDropEventArgs e) {
