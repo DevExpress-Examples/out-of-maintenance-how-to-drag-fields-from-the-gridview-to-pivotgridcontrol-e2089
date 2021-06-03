@@ -1,7 +1,7 @@
 <!-- default file list -->
 *Files to look at*:
 
-* [Form1.cs](./CS/Q250992/Form1.cs) (VB: [Form1.vb](./VB/Q250992/Form1.vb))
+* [Main.cs](./CS/Q250992/Main.cs) (VB: [Main.vb](./VB/Q250992/Main.vb))
 <!-- default file list end -->
 # How to drag fields from the GridView to PivotGridControl
 
